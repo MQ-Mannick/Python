@@ -1,5 +1,5 @@
+print("Su mail debe ser de la forma nombre@gmail.com para seguir")
 numero = 0;
-
 
 while numero != 2:
     miEmail = input("Ingrese su mail: ")
@@ -12,6 +12,10 @@ while numero != 2:
         if puntos == ".":
             numero_punto = numero_punto + 1     
     numero = numero_arroba + numero_punto
+
+if numero == 2:
+    print("su gmail es correcto")
+
 
 
 
