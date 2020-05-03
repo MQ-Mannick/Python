@@ -1,4 +1,3 @@
-
 numeros = input("Ingrese numeros separados por comas porfavor: ")
 
 lista_num = numeros.split(",")

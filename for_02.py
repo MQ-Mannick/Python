@@ -1,3 +1,4 @@
+
 print("Su mail debe ser de la forma nombre@gmail.com para seguir")
 numero = 0;
 
