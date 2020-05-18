@@ -1,53 +1,83 @@
-import random
+import math
 
 def operaciones_basicas():
 
     print('''
     Que es lo que desea hacer?
-
-    1.Sumar
-    2.Restar
-    3.Multiplicar
-    4.Dividir
-
+    1. Sumar
+    2. Restar
+    3. Multiplicar
+    4. Dividir 
     ''')
-    numero = input("Ingrese su numero -")
+    indice = input("Ingrese el indice numerico: ")
 
-    while numero != "1" and numero != "2" and numero != "3" and numero != "4": 
-        numero = input("Ingrese su numero: ")
+    while indice != "1" and indice != "2" and indice != "3" and indice != "4": 
+        print("-----------------------------------")
+        print("---Por favor ingrese valor valido---")
+        indice = input("Ingrese el indice numerico: ")
 
-    if numero == "1":
+    if indice == "1":
         return 1
-    elif numero == "2":
+    elif indice == "2":
         return 2
-    elif numero == "3":
+    elif indice == "3":
         return 3
-    elif numero == "4":
+    elif indice == "4":
         return 4
 
+def operaciones_complejas():
+
+    print('''
+    Que es lo que desea hacer?
+    1. Raiz cuadrada
+    2. Valor absoluto
+    3. Porcentaje
+    4. Cuadrado
+    5. Cubo
+    ''')
+    indice = input("Ingrese el indice numerico: ")
+
+    while indice != "1" and indice != "2" and indice != "3" and indice != "4" and indice != "5": 
+        print("-----------------------------------")
+        print("---Por favor ingrese valor valido---")
+        numero = input("Ingrese el indice numerico: ")
+
+    if indice == "1":
+        return 1
+    elif indice == "2":
+        return 2
+    elif indice == "3":
+        return 3
+    elif indice == "4":
+        return 4
+    elif indice == "5":
+        return 5
+
+def valor_doble(numero, num_doble_1, num_doble_2):
+
+    if numero == 1:
+        print(num_doble_1 + num_doble_2)
+    if numero == 2:
+        print(num_doble_1 - num_doble_2)
+    if numero == 3:
+        print(num_doble_1 * num_doble_2)
+    if numero == 4:
+        print(num_doble_1 / num_doble_2)
 
 
+def valor_unico(numero, num_solo):
 
-def valor_doble(numero):
-    print("Escriba dos numeros:")
-
-    num_1 = float(input("Ingrese su primer numero: "))
-    num_2 = float(input("Ingrese su segundo numero: "))
-
-    return num_1, num_2
-
-
-
-
-
-
-def valor_unico():
-
-    print("Escriba su numero:")
-
-    num_1 = float(input("Ingrese su numero: "))
-
-    print(num_1)
+    if numero == 1:
+        print(math.sqrt(num_solo))
+    if numero == 2:
+        print(abs(num_solo))
+    if numero == 3:
+        print("%",num_solo * 100)
+    if numero == 4:
+        print(num_solo * num_solo)
+    if numero == 5:
+        print(num_solo * num_solo * num_solo)
+    
 
 
 
@@ -72,23 +102,32 @@ print('''
 print('''
 ¿Que es lo que desea hacer?
 
--Para comparar dos valores ingrese 1
--Para evluar uno solo ingrese 2
-
+-Para comparar dos valores ingrese a
+-Para evaluar uno solo ingrese b
 ''')
 
-opcion = ""
+opcion = input("Ingrese el numero: ")
 
-while opcion != "1" and opcion != "2":
+while opcion != "a" and opcion != "b":
+    print("-----------------------------------")
+    print("---Por favor ingrese valor valido---")
     opcion = input("Ingrese el numero: ")
 
-if opcion == "1":
-    print("Has elegido el numero 1")
+if opcion == "a":
+    print("-----------------------------------")
+    print("---Has elegido la opcion valor doble---")
     num = operaciones_basicas()
-    valor_doble(num)
+    num_doble_1 = int(input("Ingrese su primer numero: "))
+    num_doble_2 = int(input("Ingrese su secundo numero: "))
+    valor_doble(num, num_doble_1, num_doble_2)
+
+    print("Desea rea")
 else:
-    print("Has elegido el numero 2")
-    valor_unico()
+    print("-----------------------------------")
+    print("---Has elegido la opcion valor unico---")
+    num = operaciones_complejas()
+    num_solo = int(input("Ingrese un valor a calcular: "))
+    valor_unico(num, num_solo)
 
 
 
