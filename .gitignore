@@ -2,3 +2,9 @@
 __pycache__
 
 __init__.py
+
+dist
+
+Miprimerpaquete.egg-info
+
+setup.py
