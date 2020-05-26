@@ -1,5 +1,25 @@
 import math
 
+def introduccion():
+
+    print('''
+    ¿Que es lo que desea hacer?
+
+    -Para comparar dos valores ingrese a
+    -Para evaluar uno solo ingrese b
+    ''')
+
+    opcion = input("Ingrese el numero: ")
+
+    while opcion != "a" and opcion != "b":
+        print("-----------------------------------")
+        print("---Por favor ingrese valor valido---")
+        opcion = input("Ingrese el numero: ")
+    if opcion == "a":
+        return "a"
+    if opcion == "b":
+        return "b"
+
 def operaciones_basicas():
 
     print('''
@@ -78,15 +98,43 @@ def valor_unico(numero, num_solo):
     if numero == 5:
         print(num_solo * num_solo * num_solo)
     
+def pregunta_doble():
+    print("Que desea hacer?")
+    print('''
+    -Para evaluar su resultado como valor unico indique x
+    -Para agregar otro numero a su resultado indique y
+    -Para realizar otra operacion indique z
+    ''')
+    indicacion = float(input("Indique su valor: "))
 
+    while indicacion != "x" and indicacion !=  "y" and indicacion != "z":
+        indicacion = float(input("Indique su valor: "))
 
+    if indicacion == "x":
+        return "x"
+    if indicacion == "y":
+        return "y"
+    if indicacion == "z":
+        return "z"
 
+def pregunta_simple():
+    print("Que desea hacer?")
+    print('''
+    -Para agregar un valor a su resultado indique x
+    -Para evaluar nuevamente y
+    -Para realizar otra operacion indique z
+    ''')
+    indicacion = float(input("Indique su valor: "))
 
+    while indicacion != "x" and indicacion !=  "y" and indicacion != "z":
+        indicacion = float(input("Indique su valor: "))
 
-
-
-
-
+    if indicacion == "x":
+        return "x"
+    if indicacion == "y":
+        return "y"
+    if indicacion == "z":
+        return "z"
 
 print('''
     __   ____  _        __  __ __  _       ____  ___     ___   ____    ____ 
@@ -99,35 +147,50 @@ print('''
                                            
 ''')
 
-print('''
-¿Que es lo que desea hacer?
-
--Para comparar dos valores ingrese a
--Para evaluar uno solo ingrese b
-''')
-
-opcion = input("Ingrese el numero: ")
-
-while opcion != "a" and opcion != "b":
-    print("-----------------------------------")
-    print("---Por favor ingrese valor valido---")
-    opcion = input("Ingrese el numero: ")
+opcion = introduccion()
 
 if opcion == "a":
-    print("-----------------------------------")
-    print("---Has elegido la opcion valor doble---")
-    num = operaciones_basicas()
-    num_doble_1 = int(input("Ingrese su primer numero: "))
-    num_doble_2 = int(input("Ingrese su secundo numero: "))
-    valor_doble(num, num_doble_1, num_doble_2)
+    indice = operaciones_basicas()
+    num_doble_1 = float(input("Ingrese su primer valor: "))
+    num_doble_2 = float(input("Ingrese su secundo valor: "))
+    valor_doble(indice, num_doble_1, num_doble_2)
 
-    print("Desea rea")
-else:
-    print("-----------------------------------")
-    print("---Has elegido la opcion valor unico---")
-    num = operaciones_complejas()
-    num_solo = int(input("Ingrese un valor a calcular: "))
-    valor_unico(num, num_solo)
+if opcion == "b":
+    indice = operaciones_complejas()
+    num_solo = float(input("Ingrese un valor unico: "))
+    valor_unico(indice, num_solo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# if opcion == "a":
+#     print("-----------------------------------")
+#     print("---Has elegido la opcion valor doble---")
+#     num = operaciones_basicas()
+#     num_doble_1 = float(input("Ingrese su primer numero: "))
+#     num_doble_2 = float(input("Ingrese su secundo numero: "))
+#     valor_doble(num, num_doble_1, num_doble_2)
+
+# if opcion == "b":
+#     print("-----------------------------------")
+#     print("---Has elegido la opcion valor unico---")
+#     num = operaciones_complejas()
+#     num_solo = float(input("Ingrese un valor a calcular: "))
+#     valor_unico(num, num_solo)
 
 
 
