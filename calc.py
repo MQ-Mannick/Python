@@ -105,10 +105,10 @@ def pregunta_doble():
     -Para agregar otro numero a su resultado indique y
     -Para realizar otra operacion indique z
     ''')
-    indicacion = float(input("Indique su valor: "))
+    indicacion = input("Indique su valor: ")
 
     while indicacion != "x" and indicacion !=  "y" and indicacion != "z":
-        indicacion = float(input("Indique su valor: "))
+        indicacion = input("Indique su valor: ")
 
     if indicacion == "x":
         return "x"
@@ -124,10 +124,10 @@ def pregunta_simple():
     -Para evaluar nuevamente y
     -Para realizar otra operacion indique z
     ''')
-    indicacion = float(input("Indique su valor: "))
+    indicacion = input("Indique su valor: ")
 
     while indicacion != "x" and indicacion !=  "y" and indicacion != "z":
-        indicacion = float(input("Indique su valor: "))
+        indicacion = input("Indique su valor: ")
 
     if indicacion == "x":
         return "x"
@@ -148,17 +148,21 @@ print('''
 ''')
 
 opcion = introduccion()
+salida_doble = ""
+salida_simple = ""
 
 if opcion == "a":
     indice = operaciones_basicas()
     num_doble_1 = float(input("Ingrese su primer valor: "))
     num_doble_2 = float(input("Ingrese su secundo valor: "))
     valor_doble(indice, num_doble_1, num_doble_2)
+    salida_doble = pregunta_doble()
 
 if opcion == "b":
     indice = operaciones_complejas()
     num_solo = float(input("Ingrese un valor unico: "))
     valor_unico(indice, num_solo)
+    salida_simple = pregunta_simple()
 
 
 
