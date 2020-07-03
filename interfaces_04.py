@@ -2,7 +2,9 @@ from tkinter import *
 
 root = Tk()
 
-my_frame = Frame(root, width = 1000, height = 1000)
+
+
+my_frame = Frame(root)
 my_frame.pack()
 
 text_square_1 = Entry(my_frame)

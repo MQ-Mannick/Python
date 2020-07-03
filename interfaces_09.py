@@ -36,5 +36,4 @@ menu_barra.add_cascade(label = "Edicion", menu = archivoEdicion) #la variable qu
 menu_barra.add_cascade(label = "Herramientas", menu = archivoHerramientas) #la variable que declaramos que pertenece a menu_barra se le asigna un texto
 menu_barra.add_cascade(label = "Ayuda", menu = archivoAyuda) #la variable que declaramos que pertenece a menu_barra se le asigna un texto
 
-
 root.mainloop()
